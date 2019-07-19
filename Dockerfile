@@ -7,5 +7,6 @@ RUN apt update && apt install -y --no-install-recommends libcurl4 libapr1 libjan
 COPY ngx_http_pxnginx_module.so /usr/lib/nginx/modules/
 
 COPY nginx.conf /etc/nginx/
+COPY section-nginx.conf /opt/proxy_config/section-nginx.conf
 
 CMD ["nginx"]

@@ -11,9 +11,9 @@ metadata:
       - container: perimeterx
         name: error.log
         stream: stderr
-    handler: openresty
+    handler: perimeterx
     http:
-      container: openresty
+      container: perimeterx
       stream: stdout
   name: perimeterx:0.0.1
 spec:

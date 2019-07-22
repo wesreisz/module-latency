@@ -26,7 +26,7 @@ pipeline {
             credentialsId: '5390e8c4-e92a-4d9c-96a9-efdaccbb4469', // gcr-push@section-io.iam.gserviceaccount.com
             variable: 'GCR_PUSH_KEY_FILE'
         )]) {
-          sh 'DEBUG=1 bash delivery.kubernetes/ci/build-module-image-specifications.sh perimeterx-module'
+          sh 'bash delivery.kubernetes/ci/build-module-image-specifications.sh perimeterx-module'
         }
         archiveArtifacts artifacts: '**/*.build.log'
       }

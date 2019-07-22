@@ -1,0 +1,26 @@
+metadata:
+  configurationMountPath: /opt/proxy_config
+  developerPop:
+    opsVariables:
+      - name: SECTION_OPS_LOG_LEVEL
+        value: debug
+  httpContainer: perimeterx
+  image: gcr.io/section-io/perimeterx:0.0.1-k1
+  logs:
+    additional:
+      - container: perimeterx
+        name: error.log
+        stream: stderr
+    handler: openresty
+    http:
+      container: openresty
+      stream: stdout
+  name: perimeterx:0.0.1
+spec:
+  containers:
+    - name: perimeterx
+      resources:
+        limits:
+          memory: 180Mi
+        requests:
+          memory: 400Mi

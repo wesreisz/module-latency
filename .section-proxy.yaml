@@ -21,6 +21,6 @@ spec:
     - name: perimeterx
       resources:
         limits:
-          memory: 180Mi
+          memory: 100Mi
         requests:
-          memory: 400Mi
+          memory: 15Mi

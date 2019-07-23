@@ -12,7 +12,7 @@ pipeline {
         dir ('delivery.kubernetes') {
           checkout([
             $class: 'GitSCM',
-            branches: [[name: '*/master']],
+            branches: [[name: '*/version/0.0.2']],
             userRemoteConfigs: [[
               credentialsId: 'jenkins-github-delivery.kubernetes',
               url: 'git@github.com:section-io/delivery.kubernetes.git'

@@ -1,6 +1,6 @@
 FROM ubuntu:18.04
 
-RUN echo 'Updating docker file'
+#RUN echo "rebuilding"
 
 # Required dependencies: libcurl4 libapr1 libjansson4 libaprutil1
 RUN apt update && apt install -y --no-install-recommends libcurl4 libapr1 libjansson4 libaprutil1 ca-certificates nginx

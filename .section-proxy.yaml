@@ -5,7 +5,7 @@ metadata:
       - name: SECTION_OPS_LOG_LEVEL
         value: debug
   httpContainer: perimeterx
-  image: gcr.io/section-io/perimeterx:0.0.1-k5
+  image: gcr.io/section-io/perimeterx:1.0.0-k1
   logs:
     additional:
       - container: perimeterx
@@ -15,7 +15,7 @@ metadata:
     http:
       container: perimeterx
       stream: stdout
-  name: perimeterx:0.0.1
+  name: perimeterx:1.0.0
 spec:
   containers:
     - name: perimeterx
